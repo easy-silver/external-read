@@ -1,5 +1,6 @@
-package hello.datasource;
+package hello.config;
 
+import hello.datasource.MyDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
