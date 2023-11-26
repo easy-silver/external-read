@@ -2,6 +2,7 @@ package hello.datasource;
 
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.time.Duration;
 import java.util.List;
@@ -28,7 +29,7 @@ public class MyDataSourcePropertiesV2 {
         private Duration timeout;
         private List<String> options;
 
-        public Etc(int maxConnection, Duration timeout, List<String> options) {
+        public Etc(int maxConnection, Duration timeout, @DefaultValue("DEFAULT") List<String> options) {
             this.maxConnection = maxConnection;
             this.timeout = timeout;
             this.options = options;
